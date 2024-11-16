@@ -57,7 +57,7 @@ export default {
         sm: 'calc(var(--radius) - 4px)',
       },
       boxShadow: {
-        custom: '-10px 0 15px -5px rgba(0, 0, 0, 0.3)', // إضافة الشادو المخصص
+        custom: '-10px 0 15px -5px #4747C74D', // إضافة الشادو المخصص
       },
     },
   },
