@@ -1,5 +1,5 @@
-import Image from "next/image"
-import Link from "next/link"
+import Image from "next/image";
+import Link from "next/link";
 
 export default function Categories() {
   const categories = [
@@ -43,9 +43,9 @@ export default function Categories() {
       <div className="grid grid-cols-2 gap-6 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3">
         {categories.map((category, index) => (
           category.link ? (
-            <Link href={category.link} key={index} passHref className="bg-white hover:scale-90">
+            <Link href={category.link} key={index} passHref>
               <div
-                className={`group shadow-custom relative h-36 w-36  md:w-36 overflow-hidden rounded-2xl ${category.color} p-0`}
+                className={`group shadow-custom relative h-36 w-36 md:w-36 overflow-hidden rounded-2xl ${category.color} p-0 transform transition-transform duration-300 hover:scale-105`}
                 aria-label={category.name}
               >
                 <div className="absolute inset-0 flex flex-col items-center justify-center p-4">
@@ -64,7 +64,7 @@ export default function Categories() {
           ) : (
             <div
               key={index}
-              className={`hover:scale-90 group shadow-custom relative h-36 w-32 md:w-36 overflow-hidden rounded-2xl ${category.color} p-0`}
+              className={`group shadow-custom relative h-36 w-32 md:w-36 overflow-hidden rounded-2xl ${category.color} p-0 transform transition-transform duration-300 hover:scale-105`}
               aria-label={category.name}
             >
               <div className="absolute inset-0 flex flex-col items-center justify-center p-4">
