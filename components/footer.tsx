@@ -1,98 +1,184 @@
 import Link from "next/link"
-import { Facebook, Instagram, Twitter } from 'lucide-react'
-import Image from "next/image";
+import Image from "next/image"
+import { FaBehanceSquare, FaInstagramSquare } from "react-icons/fa"
+import { FaFacebook, FaSquareTwitter } from "react-icons/fa6"
+import { CiBookmark, CiMail } from "react-icons/ci"
+import { IoIosHelpCircleOutline } from "react-icons/io"
+import { AiOutlineExclamationCircle } from "react-icons/ai"
 
 export default function Footer() {
-  const sections = [
-    {
-      title: "Design Services",
-      links: [
-        "Design Contest",
-        "Hiring 1 to 1",
-        "Switch to Designer",
-        "75 design Studio",
-        "Find a Designer",
-        "Discover Designs",
-      ],
-    },
-    {
-      title: "Category",
-      links: [
-        "Logo - brand identity",
-        "T-shirt",
-        "Label - packaging",
-        "Illustration - graphics",
-        "Web - App design",
-        "All categories",
-      ],
-    },
-  ];
-
-  const supportLinks = ["Pricing", "Join to 75 design", "Help", "About", "Contact"];
-
   return (
-    <footer className="w-full bg-[#1e2b3c] text-white">
-      <div className="container px-4 py-8">
-        <div className="grid grid-cols-2 gap-8">
-          {sections.map((section, index) => (
-            <div key={index}>
-              <h3 className="text-sm font-medium mb-4">{section.title}</h3>
-              <ul className="space-y-2 text-xs">
-                {section.links.map((link, linkIndex) => (
-                  <li key={linkIndex}>
-                    <Link href="#" className="text-gray-300 hover:text-white">
-                      {link}
-                    </Link>
-                  </li>
-                ))}
-              </ul>
-            </div>
-          ))}
-        </div>
-        <div className="mt-8">
-          <h3 className="text-sm font-medium mb-4">Support</h3>
-          <ul className="space-y-2 text-xs">
-            {supportLinks.map((link, index) => (
-              <li key={index}>
+    <footer className="w-full text-white bg-[#1e2b3c]">
+      <div className="">
+        <div className="grid grid-cols-1 gap-8 md:grid-cols-3 px-auto px-8 py-16 md:pl-20">
+          {/* Design Services Column */}
+          <div>
+            <h3 className="mb-6 text-base font-medium">Design Services</h3>
+            <ul className="space-y-4">
+              <li>
                 <Link href="#" className="text-gray-300 hover:text-white">
-                  {link}
+                  Design Contest
                 </Link>
               </li>
-            ))}
-          </ul>
-        </div>
-        <div className="mt-8 flex justify-between items-center">
-          <Link href="/" className="flex items-center">
-            <Image
-              src='/logofooter.svg'
-              alt="75design"
-              width={80}
-              height={24}
-              className="h-auto w-auto"
-            />
+              <li>
+                <Link href="#" className="text-gray-300 hover:text-white">
+                  Hiring 1 to 1
+                </Link>
+              </li>
+              <li>
+                <Link href="#" className="text-gray-300 hover:text-white">
+                  Switch to Designer
+                </Link>
+              </li>
+              <li>
+                <Link href="#" className="text-gray-300 hover:text-white">
+                  77S design Studio
+                </Link>
+              </li>
+              <li>
+                <Link href="#" className="text-gray-300 hover:text-white">
+                  Find a Designer
+                </Link>
+              </li>
+              <li>
+                <Link href="#" className="text-gray-300 hover:text-white">
+                  Discover Designs
+                </Link>
+              </li>
+            </ul>
+          </div>
+
+          {/* Category Column */}
+          <div>
+            <h3 className="mb-6 text-base font-medium">Category</h3>
+            <ul className="space-y-4">
+              <li>
+                <Link href="#" className="text-gray-300 hover:text-white">
+                  Logo - brand identity
+                </Link>
+              </li>
+              <li>
+                <Link href="#" className="text-gray-300 hover:text-white">
+                  T-shirt
+                </Link>
+              </li>
+              <li>
+                <Link href="#" className="text-gray-300 hover:text-white">
+                  Label - packaging
+                </Link>
+              </li>
+              <li>
+                <Link href="#" className="text-gray-300 hover:text-white">
+                  Illustration - graphics
+                </Link>
+              </li>
+              <li>
+                <Link href="#" className="text-gray-300 hover:text-white">
+                  Web - App design
+                </Link>
+              </li>
+              <li>
+                <Link href="#" className="text-gray-300 hover:text-white">
+                  All categories
+                </Link>
+              </li>
+            </ul>
+          </div>
+
+          {/* Support Column */}
+          <div>
+            <ul className="space-y-4">
+              <li>
+                <Link href="#" className="flex items-center gap-2 text-gray-300 hover:text-white">
+                <CiBookmark className="h-8 w-8"/>
+                  Pricing
+                </Link>
+              </li>
+              <li>
+                <Link href="#" className="flex items-center gap-2 text-gray-300 hover:text-white">
+                <CiMail className="h-8 w-8"/>
+                  Join to 775 design
+                </Link>
+              </li>
+              <li>
+                <Link href="#" className="flex items-center gap-2 text-gray-300 hover:text-white">
+                <IoIosHelpCircleOutline className="h-8 w-8"/>
+                  Help
+                </Link>
+              </li>
+              <li>
+                <Link href="#" className="flex items-center gap-2 text-gray-300 hover:text-white">
+                <AiOutlineExclamationCircle className="h-8 w-8"/>
+                  About
+                </Link>
+              </li>
+              <li>
+                <Link href="#" className="flex items-center gap-2 text-gray-300 hover:text-white">
+                <Image
+                  src="/contact.svg"
+                  alt="75design"
+                  width={20}
+                  height={20}
+                  className="h-auto w-auto"
+                />
+                  Contact
+                </Link>
+                <div className="mt-8 flex items-center gap-4">
+          <Link href="#" className="text-sm text-gray-300 hover:text-white">
+            Design Language
           </Link>
-          <div className="flex items-center gap-4">
-            <Link href="#">
-              <Facebook className="h-5 w-5 text-gray-300 hover:text-white" />
-            </Link>
-            <Link href="#">
-              <Instagram className="h-5 w-5 text-gray-300 hover:text-white" />
-            </Link>
-            <Link href="#">
-              <Twitter className="h-5 w-5 text-gray-300 hover:text-white" />
-            </Link>
+          <Link href="#" className="text-sm bg-white text-black p-1 rounded-xl">
+          English
+          </Link>
+          <Link href="#" className="text-sm text-gray-300 hover:text-white">
+            عربي
+          </Link>
+        </div>
+              </li>
+            </ul>
           </div>
         </div>
-        <div className="mt-4 flex justify-between items-center text-xs text-gray-300">
-          <div className="flex gap-4">
-            <Link href="#" className="hover:text-white">
-              Terms
-            </Link>
-            <Link href="#" className="hover:text-white">
-              Privacy
-            </Link>
+
+        {/* Language Selector */}
+
+
+        {/* Bottom Section */}
+        <div className="bg-[#13192E] p-20 border-t-2">
+          <div className="flex flex-col items-center justify-between gap-6 md:flex-row">
+            <div className="flex items-center gap-8">
+              <Link href="/" className="flex items-center">
+                <Image
+                  src="/logofooter.svg"
+                  alt="75design"
+                  width={120}
+                  height={40}
+                  className="h-auto w-auto"
+                />
+              </Link>
+              <div className="flex items-center gap-4">
+                <Link href="#" className="text-sm text-gray-300 hover:text-white">
+                  Terms
+                </Link>
+                <Link href="#" className="text-sm text-gray-300 hover:text-white">
+                  Privacy
+                </Link>
+              </div>
+            </div>
+            <div className="flex items-center gap-3">
+              <Link href="#" aria-label="Behance">
+                <FaBehanceSquare className="h-6 w-6 text-gray-300 hover:text-white" />
+              </Link>
+              <Link href="#" aria-label="Facebook">
+                <FaFacebook className="h-6 w-6 text-gray-300 hover:text-white" />
+              </Link>
+              <Link href="#" aria-label="Instagram">
+                <FaInstagramSquare className="h-6 w-6 text-gray-300 hover:text-white" />
+              </Link>
+              <Link href="#" aria-label="Twitter">
+                <FaSquareTwitter className="h-6 w-6 text-gray-300 hover:text-white" />
+              </Link>
+            </div>
           </div>
-          <p>© 75design</p>
         </div>
       </div>
     </footer>

@@ -9,12 +9,12 @@ import {
   SelectTrigger,
   SelectValue,
 } from "@/components/ui/select"
-import { FastForward } from "lucide-react"
+import { IoIosFastforward } from "react-icons/io"
 
 export default function Hero() {
   return (
-    <div className="px-4 md:py-12 bg-[#F5F7FA]">
-      <div className="flex flex-col lg:flex-row items-center justify-center gap-12">
+    <div className="px-20 bg-[#F5F7FA]">
+      <div className="flex flex-col lg:flex-row items-center justify-between gap-12">
         <div className="md:hidden block">
           <Image
             src="/02.png" // ضع مسار صورة الخلفية هنا
@@ -59,11 +59,7 @@ export default function Hero() {
           </div>
 
           <div className="mt-2 text-gray-500 text-sm text-center">Project 1 to 1</div>
-          <div className="mx-auto mt-8 flex max-w-3xl items-center justify-center gap-2 text-[#ff5757]">
-            <FastForward className="h-5 w-5" />
-            <span className="font-bold">IP PROTECTION FOR YOUR DESIGNS - 100% GUARANTEE</span>
-            <FastForward className="h-5 w-5 rotate-180" />
-          </div>
+
         </div>
         <div className="hidden md:block">
           <Image
@@ -75,6 +71,11 @@ export default function Hero() {
           />
         </div>
       </div>
+      <div className="mx-auto mt-8 flex items-center justify-center gap-2 text-[#ff5757] w-full">
+            <IoIosFastforward className="h-8 w-8" />
+            <span className="font-bold md:text-4xl text-center text-sm p-4">IP PROTECTION FOR YOUR DESIGNS - 100% GUARANTEE</span>
+            <IoIosFastforward className="h-8 w-8 rotate-180" />
+          </div>
     </div>
   )
 }

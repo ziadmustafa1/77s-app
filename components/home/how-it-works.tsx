@@ -21,7 +21,7 @@ export default function HowItWorks() {
   ];
 
   return (
-    <div className="container mx-auto px-4 py-12">
+    <div className="container md:pl-20 mx-auto px-4 py-12">
       {/* Section Title */}
       <h2 className="mb-16 text-center text-4xl font-bold text-[#ff5757]">
         How it works & Experience

@@ -1,4 +1,3 @@
-import { Button } from "@/components/ui/button"
 import Image from "next/image"
 import Link from "next/link"
 
@@ -7,31 +6,31 @@ export default function Categories() {
     {
       name: "Logo & Brand identity",
       img: '/logocat.svg',
-      color: "bg-[#ff5757]",
+      color: "bg-[#FF5F6B]",
     },
     {
       name: "Business & Advertising",
       img: '/Businesslogo.svg',
-      color: "bg-[#7b61ff]",
+      color: "bg-[#4747C7]",
     },
     {
       name: "Illustration & Graphics",
       img: '/Illustration.svg',
-      color: "bg-[#1e2b3c]",
+      color: "bg-[#13192E]",
     },
     {
       name: "Web & App design",
       img: '/Web.svg',
-      color: "bg-[#00e5b0]",
+      color: "bg-[#00C7C7]",
     },
     {
       name: "Clothing & Merchandise",
       img: '/Clothing.svg',
-      color: "bg-[#1e2b3c]",
+      color: "bg-[#252C47]",
     },
     {
       name: "All Categories",
-      color: "bg-white",
+      color: "bg-[#F5F7FA]",
       textColor: "text-gray-900",
       img: '/allcat.svg',
       link: "/all-categories",
@@ -39,14 +38,14 @@ export default function Categories() {
   ]
 
   return (
-    <div className="container mx-auto md:px-12 py-12 md:pl-16 px-5">
+    <div className="container mx-auto md:px-12 py-12 md:pl-32 pl-10 px-5">
       <h2 className="mb-8 text-lg font-medium">Categories:</h2>
       <div className="grid grid-cols-2 gap-6 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3">
         {categories.map((category, index) => (
           category.link ? (
-            <Link href={category.link} key={index} passHref className="bg-white">
-              <Button
-                className={`group shadow-custom relative h-32 w-44  md:w-60 overflow-hidden rounded-2xl ${category.color} p-0`}
+            <Link href={category.link} key={index} passHref className="bg-white hover:scale-90">
+              <div
+                className={`group shadow-custom relative h-36 w-36  md:w-36 overflow-hidden rounded-2xl ${category.color} p-0`}
                 aria-label={category.name}
               >
                 <div className="absolute inset-0 flex flex-col items-center justify-center p-4">
@@ -60,26 +59,26 @@ export default function Categories() {
                     {category.name}
                   </span>
                 </div>
-              </Button>
+              </div>
             </Link>
           ) : (
-            <Button
+            <div
               key={index}
-              className={`group shadow-custom relative h-32 md:w-60 overflow-hidden rounded-2xl ${category.color} p-0`}
+              className={`hover:scale-90 group shadow-custom relative h-36 w-32 md:w-36 overflow-hidden rounded-2xl ${category.color} p-0`}
               aria-label={category.name}
             >
               <div className="absolute inset-0 flex flex-col items-center justify-center p-4">
                 <Image
                   src={category.img}
                   alt={category.name}
-                  width={50}
+                  width={70}
                   height={20}
                 />
-                <span className={`text-center mt-3 text-sm font-medium ${category.textColor || 'text-white'}`}>
+                <span className={`text-center mt-3 text-sm font-bold ${category.textColor || 'text-white'}`}>
                   {category.name}
                 </span>
               </div>
-            </Button>
+            </div>
           )
         ))}
       </div>
